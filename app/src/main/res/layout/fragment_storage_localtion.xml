@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.StorageLocationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/m_10"
+            android:weightSum="2"
+            android:layout_margin="@dimen/m_16">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_location"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_16"
+                android:background="@drawable/bg_transparent"
+                android:hint="@string/ex_location"
+                android:padding="@dimen/m_10"
+                android:focusable="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/m_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_10"
+                    android:layout_marginRight="@dimen/m_10"
+                    android:text="@string/lbl_qty"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_qty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_12"
+                    android:layout_weight="0.9"
+                    android:background="@drawable/bg_transparent"
+                    android:digits="1234567890"
+                    android:drawablePadding="@dimen/m_12"
+                    android:hint="@string/ex_qty"
+                    android:padding="@dimen/m_10"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/img_add_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/m_12"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/ic_baseline_add_circle_outline_24" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_20"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_empty_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/lbl_add_location" />
+        <RelativeLayout
+            android:id="@+id/rel_button_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/m_20"
+            android:layout_marginTop="@dimen/m_30"
+            android:visibility="gone">
+            <ImageButton
+                android:id="@+id/btn_check_previous"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_button"
+                android:padding="@dimen/m_20"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textDirection="firstStrongLtr" />
+        <Button
+            android:id="@+id/btn_add_data"
+            android:layout_width="@dimen/m_200"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corner_button"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/m_16"
+            android:text="@string/btn_submit"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

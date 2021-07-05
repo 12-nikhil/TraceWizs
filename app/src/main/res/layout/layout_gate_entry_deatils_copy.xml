@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activitys.GateEntryDetailsActivity">
+
+    <include
+        android:id="@+id/inc_toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inc_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m_10"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/m_5"
+                android:padding="@dimen/m_10"
+                android:layout_margin="@dimen/m_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/m_16">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_material_detail"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_material_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10"
+                        android:text="@string/lbl_material_name"
+                        android:drawableLeft="@drawable/ic_baseline_shopping_bag_24"
+                        android:drawablePadding="@dimen/m_16"/>
+
+                    <TextView
+                        android:id="@+id/txt_qty_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10"
+                        android:text="@string/lbl_qty"
+                        android:drawableLeft="@drawable/ic_baseline_production_quantity_limits_24"
+                        android:drawablePadding="@dimen/m_16"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_10"
+                app:cardElevation="@dimen/m_10"
+                android:padding="@dimen/m_10"
+                android:layout_margin="@dimen/m_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/m_16">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_supplier_details"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_supplier_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10"
+                        android:text="@string/lbl_supplier_name"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="@dimen/m_16" />
+
+                    <TextView
+                        android:id="@+id/txt_supplier_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10"
+                        android:text="@string/lbl_mobile_number"
+                        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+                        android:drawablePadding="@dimen/m_16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/m_10"
+                            android:text="@string/lbl_invoice_no"
+                            android:textColor="@color/colorDarkGray"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txt_inv_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/m_5"
+                            android:text="@string/lbl_invoice_no" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/m_10"
+                            android:text="@string/lbl_coa"
+                            android:textColor="@color/colorDarkGray"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txt_coa_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/m_5"
+                            android:text="@string/lbl_invoice_no" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_10"
+                app:cardElevation="@dimen/m_5"
+                android:padding="@dimen/m_10"
+                android:layout_margin="@dimen/m_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/m_16">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_driver_details"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_driver_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10"
+                        android:text="@string/lbl_material_name"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="@dimen/m_16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/m_10"
+                            android:text="@string/lbl_licence_no"
+                            android:textColor="@color/colorDarkGray"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txt_licence_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/m_5"
+                            android:text="@string/lbl_licence_no" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_10">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/m_10"
+                            android:text="@string/lbl_truck_no"
+                            android:textColor="@color/colorDarkGray"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txt_truck_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/m_5"
+                            android:text="@string/lbl_truck_no"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/m_20"
+        android:layout_marginBottom="@dimen/m_50"
+        android:layout_marginLeft="@dimen/m_16"
+        android:layout_marginRight="@dimen/m_16"
+        android:background="@drawable/round_corner_button"
+        android:padding="@dimen/m_10"
+        android:text="@string/btn_continue"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</RelativeLayout>

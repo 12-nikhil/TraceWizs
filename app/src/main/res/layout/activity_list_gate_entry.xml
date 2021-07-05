@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.ListGateEntryActivity">
+    <include android:id="@+id/inc_toolbar"
+        layout="@layout/layout_toolbar"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_gate_entry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inc_toolbar"
+        android:layout_margin="@dimen/m_10"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/txt_empty_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_no_data"
+       android:layout_centerInParent="true"
+        android:layout_margin="@dimen/m_16"
+        android:gravity="center"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/prb_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

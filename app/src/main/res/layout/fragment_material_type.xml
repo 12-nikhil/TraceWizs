@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MaterialTypeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/m_16"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_20"
+            android:layout_marginBottom="@dimen/m_10"
+            android:text="@string/lbl_material_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10"
+            android:layout_marginBottom="@dimen/m_10"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/rb_raw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="false"
+                    android:text="@string/lbl_raw"
+                    android:textSize="@dimen/s_20"
+                    android:drawablePadding="@dimen/m_10"/>
+
+                <RadioButton
+                    android:id="@+id/rb_package"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="false"
+                    android:text="@string/lbl_packaging"
+                    android:textSize="@dimen/s_20" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_transparent"
+            android:padding="@dimen/m_16">
+
+            <Spinner
+                android:id="@+id/spn_material"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+          <!--  <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_30"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/m_30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_qty"
+                android:textColor="@color/black"
+                android:textSize="@dimen/s_20"
+                android:layout_marginTop="@dimen/m_10"/>
+
+            <EditText
+                android:id="@+id/edt_qty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m_16"
+                android:layout_marginTop="@dimen/m_12"
+                android:layout_weight="1"
+                android:background="@drawable/bg_transparent"
+                android:inputType="number"
+                android:padding="@dimen/m_10"></EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/s_20"
+                android:text="@string/lbl_unit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/s_20"
+                android:layout_marginTop="@dimen/m_10"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/s_20"
+                android:layout_weight="1"
+                android:background="@drawable/bg_transparent"
+                android:padding="@dimen/m_10">
+
+                <Spinner
+                    android:id="@+id/spn_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/unit_array"
+                    android:textSize="16sp" />
+
+              <!--  <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />-->
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_20">
+
+            <ImageButton
+                android:id="@+id/btn_next"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_30"
+                android:background="@drawable/round_corner_button"
+                android:padding="@dimen/m_16"
+                android:src="@drawable/ic_baseline_arrow_forward_24"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

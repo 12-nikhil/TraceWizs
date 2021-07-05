@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DocumentFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m_16"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_lbl_inv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/m_5"
+                    android:text="@string/lbl_invoice_no"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/s_20" />
+
+                <ImageView
+                    android:id="@+id/img_upload_invoice_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/m_10"
+                    android:src="@drawable/ic_baseline_arrow_circle_up_24" />
+                <EditText
+                    android:id="@+id/edt_invoice_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_lbl_inv"
+                    android:background="@drawable/bg_transparent"
+                    android:padding="@dimen/m_10"
+                    android:layout_marginTop="@dimen/m_12"
+                    android:inputType="textCapCharacters"
+                    android:hint="@string/ex_coa"
+                    android:drawableStart="@drawable/ic_baseline_invoice_24"
+                    android:drawablePadding="@dimen/m_12"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_inv_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/m_10"
+                    android:visibility="visible"/>
+
+              <!--  <ImageView
+                    android:id="@+id/img_invoice"
+                    android:layout_width="@dimen/m_200"
+                    android:layout_height="@dimen/m_150"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/txt_invoice_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m_10"
+                    android:layout_below="@+id/img_invoice"
+                    android:padding="@dimen/m_5"/>-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_lbl_coa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/m_5"
+                    android:text="@string/lbl_coa"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/s_20" />
+
+                <ImageView
+                    android:id="@+id/img_upload_cao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/m_10"
+                    android:src="@drawable/ic_baseline_arrow_circle_up_24" />
+
+                    <EditText
+                        android:id="@+id/edt_coa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_lbl_coa"
+                        android:background="@drawable/bg_transparent"
+                        android:padding="@dimen/m_10"
+                        android:layout_marginTop="@dimen/m_12"
+                        android:hint="@string/ex_coa"
+                        android:inputType="textCapCharacters"
+                        android:drawableStart="@drawable/ic_baseline_invoice_24"
+                        android:drawablePadding="@dimen/m_12"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_coa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_coa_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/m_10"
+                    android:visibility="visible"/>
+
+              <!--  <ImageView
+                    android:id="@+id/img_coa"
+                    android:layout_width="@dimen/m_200"
+                    android:layout_height="@dimen/m_150"
+                    android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/txt_coa_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m_10"
+                    android:layout_below="@+id/img_coa"
+                    android:padding="@dimen/m_5"/>-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_20">
+                <ImageButton
+                    android:id="@+id/btn_previous"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_20"
+                    android:background="@drawable/round_corner_button"
+                    android:padding="@dimen/m_16"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_gravity="right"
+                    android:textDirection="firstStrongLtr" />
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_20"
+                    android:background="@drawable/round_corner_button"
+                    android:padding="@dimen/m_10"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="@string/btn_submit"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

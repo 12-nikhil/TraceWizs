@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CheckAndCorrectFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m_16"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- inv check -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_5"
+                    android:text="@string/lbl_inv_check"
+                    android:textSize="@dimen/s_18" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end">
+
+                    <CheckBox
+                        android:id="@+id/chk_inv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                        android:gravity="end" />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--  COA Check -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_5"
+                    android:text="@string/lbl_coa_check"
+                    android:textSize="@dimen/s_18" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end">
+
+                    <CheckBox
+                        android:id="@+id/chk_coa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                        android:gravity="end" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- Material Check -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_5"
+                    android:text="@string/lbl_material_check"
+                    android:textSize="@dimen/s_18" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end">
+
+                    <CheckBox
+                        android:id="@+id/chk_material"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                        android:gravity="end" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!--  qty check -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_5"
+                    android:text="@string/lbl_qty_check"
+                    android:textSize="@dimen/s_18" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="end">
+
+                    <CheckBox
+                        android:id="@+id/chk_qty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                        android:gravity="end" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_10"
+                android:padding="@dimen/m_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_batch_no"
+                        android:textSize="@dimen/s_18"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edt_batch_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_12"
+                        android:background="@drawable/bg_transparent"
+                        android:digits="1234567890"
+                        android:hint="@string/ex_batch_no"
+                        android:padding="@dimen/m_10"
+                        android:inputType="number"
+                        android:focusable="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_5"
+                        android:text="@string/lbl_note"
+                        android:textSize="@dimen/s_18"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edt_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_12"
+                        android:background="@drawable/bg_transparent"
+                        android:drawablePadding="@dimen/m_12"
+                        android:hint="@string/ex_note"
+                        android:padding="@dimen/m_10"
+                        android:textAllCaps="true" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_20">
+
+                <ImageButton
+                    android:id="@+id/btn_check_next"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m_30"
+                    android:background="@drawable/round_corner_button"
+                    android:padding="@dimen/m_16"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
